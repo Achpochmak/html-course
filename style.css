@@ -1,102 +1,104 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-li {
-    text-decoration: none;
-    list-style: none;
-}
-
-body {
     font-family: 'Raleway', sans-serif;
 }
 
-.logo {
-    background: #000000;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.grafficLogo {
-    padding: 5px;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-#nav {
-    margin: auto;
-    width: 1280px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-}
-
-.topnav {
-    background-color: #fff;
-    font-size: 14px;
-    margin-top: 40px;
-    position: absolute;
+nav {
+    margin: 0 auto;
+    max-width: 1100px;
     width: 100%;
 }
-
-.topnav a {
-    color: #000;
-    text-align: center;
-    padding: 14px 16px;
-    font-size: 15px;
-    border-bottom: 2px solid transparent;
-    max-width: 80px;
+body,html {
+    overflow-x: hidden;
 }
-
-.topnav a:hover {
-    border-bottom: 2px solid #000;
-}
-
-.topnav .icon {
+#checkbox-menu,
+.toggle{
     display: none;
-    margin-top: 40px;
 }
 
-@media screen and (max-width: 768px) {
-    .topnav a:not(:first-child) {
-        display: none;
-    }
-    /* .topnav a: n(:first-child){
-        padding: 14px 16px; 
-    } */
+.menu{
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
 
-    .topnav a.icon {
-        float: right;
-        margin-top: -17px;
+.menu li a{
+    color: #000;
+    text-decoration: none;
+    align-self: center;
+    font-size: 13px;
+    padding: 10px 15px;
+    transition: background .2s linear;
+}
+
+.menu li a:hover{
+    background: #ffcc01;
+    border-radius: 3px;
+}
+
+.menu li a.logo{
+    font-size: 25px;
+    margin-right: 240px;
+}
+.menu li a.contacts{
+    margin-right: 100px;
+}
+
+@media screen and (max-width: 765px){
+    .toggle{
+        clear:both;
         display: block;
-        color: #000;
-    }
-
-    #nav {
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
         width: 100%;
-        height: 100px;
-        display: block;
+        color: #000;
+        background: #ffcc01;
+        transition: all .1s linear;
     }
-
-    .topnav.responsive {
-        position: relative;
+    .toggle:hover{
+        background: #d3a900;
     }
-
-    .topnav.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
+    #checkbox-menu:checked +label .touch li{
+        opacity: 1;
+        visibility: visible;
+        transition: all .7s linear;
     }
-
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
+    #checkbox-menu:checked + label .touch{
+        height: 350px;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 0;
+        transition: height .3s linear;
+    }
+    .menu li{
+        display: flex;
+        align-self: center;
+        width: 95%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .menu li a{
+        width: 95%;
+        text-align: center;
+        align-self: center;
+        align-content: center;
+    }
+    .menu li a.logo{
+        font-size: 21px;
+        margin-right: 0px;
+    }
+    .menu li a.contacts{
+        margin-right: 0px;
     }
 }
