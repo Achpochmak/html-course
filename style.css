@@ -9,15 +9,18 @@ nav {
     max-width: 1100px;
     width: 100%;
 }
-body,html {
+
+body,
+html {
     overflow-x: hidden;
 }
+
 #checkbox-menu,
-.toggle{
+.toggle {
     display: none;
 }
 
-.menu{
+.menu {
     padding: 0;
     margin: 0;
     height: 50px;
@@ -28,7 +31,7 @@ body,html {
     list-style-type: none;
 }
 
-.menu li a{
+.menu li a {
     color: #000;
     text-decoration: none;
     align-self: center;
@@ -37,22 +40,69 @@ body,html {
     transition: background .2s linear;
 }
 
-.menu li a:hover{
+.menu li a:hover {
     background: #ffcc01;
     border-radius: 3px;
 }
 
-.menu li a.logo{
+.menu li a.logo {
     font-size: 25px;
     margin-right: 240px;
 }
-.menu li a.contacts{
+
+.menu li a.contacts {
     margin-right: 100px;
 }
 
-@media screen and (max-width: 1000px){
-    .toggle{
-        clear:both;
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.intro {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.intro-img {
+    background-image: url("room.jpg");
+    width: 1024px;
+    height: 640px;
+}
+
+.intro .intro-text {
+    position: absolute;
+    font-size: 62px;
+    right: 950px;
+    top: 220px;
+}
+
+.intro-contacts {
+    background-color: #ffcc01;
+    max-width: 590px;
+    position: absolute;
+    right: 170px;
+    top: 630px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+}
+
+.intro-contacts i {
+    color: #fff;
+    margin-right: 30px;
+}
+
+.intro-contacts p {
+    font-size: 18px;
+    margin-right: 60px;
+}
+@media screen and (max-width: 1000px) {
+    .toggle {
+        clear: both;
         display: block;
         text-align: center;
         font-size: 18px;
@@ -62,18 +112,22 @@ body,html {
         background: #ffcc01;
         transition: all .1s linear;
     }
-    .toggle:hover{
+
+    .toggle:hover {
         background: #d3a900;
     }
-    #checkbox-menu:checked +label .touch li{
+
+    #checkbox-menu:checked+label .touch li {
         opacity: 1;
         visibility: visible;
         transition: all .7s linear;
     }
-    #checkbox-menu:checked + label .touch{
+
+    #checkbox-menu:checked+label .touch {
         height: 350px;
     }
-    .menu{
+
+    .menu {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -81,24 +135,60 @@ body,html {
         height: 0;
         transition: height .3s linear;
     }
-    .menu li{
+
+    .menu li {
         display: flex;
         align-self: center;
         width: 95%;
         opacity: 0;
         visibility: hidden;
     }
-    .menu li a{
+
+    .menu li a {
         width: 95%;
         text-align: center;
         align-self: center;
         align-content: center;
     }
-    .menu li a.logo{
+
+    .menu li a.logo {
         font-size: 21px;
         margin-right: 0px;
     }
-    .menu li a.contacts{
+
+    .menu li a.contacts {
         margin-right: 0px;
     }
+
+    .intro {
+        margin-top: 0;
+        display: block;
+        min-width: 100%;
+    }
+    .intro-img{
+        background-position: bottom 50px right 570px;
+        width: 480px;
+        height: 580px;
+    }
+    .intro .intro-text{
+        position: relative;
+        font-size: 35px;
+        right: -10px;
+        top: 95px;
+    }
+    .intro .intro-contacts{
+        right: 0;
+        top: -60px;
+        padding: 20px 10px;
+        position: relative;
+    }
+    .intro-contacts i{
+        margin-right: 10px;
+        
+    }
+    .intro-contacts p{
+        font-style: 13px;
+        margin-right: 0;
+    }
+
 }
