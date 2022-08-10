@@ -76,8 +76,8 @@ html {
 .intro .intro-text {
     position: absolute;
     font-size: 62px;
-    right: 950px;
-    top: 220px;
+    left: 240px;
+    top: 120px;
 }
 
 .intro-contacts {
@@ -85,7 +85,7 @@ html {
     max-width: 590px;
     position: absolute;
     right: 170px;
-    top: 630px;
+    top: 670px;
     display: flex;
     justify-content: space-between;
     padding: 30px 50px;
@@ -99,6 +99,52 @@ html {
 .intro-contacts p {
     font-size: 18px;
     margin-right: 60px;
+}
+
+.stats {
+    display: flex;
+    margin-top: 130px;
+}
+
+.stats-line {
+    display: flex;
+}
+
+.stats-text {
+    padding: 40px;
+    text-align:justify;
+}
+
+.stats-text h2{
+    font-size: 40px;
+    margin-bottom: 70px;
+}
+
+.stats-text p{
+    margin-top: 50px;
+    font-size: 13px;
+    line-height: 27px;
+}
+
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: #f6f5f4;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stats-square{
+    font-size: 40px;
+    color: #ffcc01;
+    margin-bottom: 15px;
+}
+ 
+.square-text{
+    font-size: 14px;
 }
 @media screen and (max-width: 1000px) {
     .toggle {
@@ -165,30 +211,56 @@ html {
         display: block;
         min-width: 100%;
     }
-    .intro-img{
-        background-position: bottom 50px right 570px;
-        width: 480px;
-        height: 580px;
+
+    .intro-img {
+        background-position: bottom 50px;
+        height: 700px;
+        width: 100%;
     }
-    .intro .intro-text{
+
+    .intro .intro-text {
         position: relative;
         font-size: 35px;
         right: -10px;
         top: 95px;
     }
-    .intro .intro-contacts{
+
+    .intro .intro-contacts {
+        left: 0;
         right: 0;
         top: -60px;
         padding: 20px 10px;
         position: relative;
+        max-width: none;
     }
-    .intro-contacts i{
+
+    .intro-contacts i {
         margin-right: 10px;
-        
+
     }
-    .intro-contacts p{
+
+    .intro-contacts p {
         font-style: 13px;
         margin-right: 0;
     }
-
+    .stats{
+        margin-top: 0;
+        flex-direction: column;
+    }
+    .stats-text{
+        padding: 10px;
+        margin: 20px;
+    }
+    .stats-text h2{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .stats-text p{
+        margin-top: 5px;
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .square{
+        height: 140px;
+    }
 }
